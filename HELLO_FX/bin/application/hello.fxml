@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="200" prefWidth="200" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" >
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label fx:id="lbl" layoutX="101.0" layoutY="74.0" prefHeight="30.0" prefWidth="97.0" text="hello" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

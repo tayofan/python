@@ -4,7 +4,7 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow, QApplication
 
 
-form_class = uic.loadUiType('myqt01.ui')[0]
+form_class = uic.loadUiType('myqt03.ui')[0]
 
 class MyWindow(QMainWindow, form_class):
     def __init__(self):
@@ -14,12 +14,11 @@ class MyWindow(QMainWindow, form_class):
         self.show()
         
     def clickedPb(self):
-        lblText = self.lbl.text();
+        a = int(self.le1.text())
+        b = int(self.le2.text())
         
-        if lblText == 'Good Morning':
-            self.lbl.setText("Good Evening")
-        else:
-            self.lbl.setText("Good Morning")
+        c = a + b
+        self.le3.setText(str(c))        
             
             
         

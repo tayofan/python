@@ -8,9 +8,10 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PopupControl;
 import javafx.scene.control.TextField;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
@@ -54,6 +55,7 @@ public class Main8 extends Application {
 			
 			btn_call.setOnMouseClicked(new EventHandler<Event>() {
 				String result = "";
+				
 
 				@Override
 				public void handle(Event event) {
@@ -82,13 +84,15 @@ public class Main8 extends Application {
 			btn0.setOnMouseClicked(new EventHandler<Event>() {
 				@Override
 				public void handle(Event event) {
-					tf.setText("" + tf.getText() + btn0.getText());
+//					tf.setText("" + tf.getText() + btn0.getText());
+					myclick(event);
 				}
 			});
 			btn1.setOnMouseClicked(new EventHandler<Event>() {
 				@Override
 				public void handle(Event event) {
-					tf.setText("" + tf.getText() + btn1.getText());
+//					tf.setText("" + tf.getText() + btn1.getText());
+					myclick(event);
 				}
 			});
 			btn2.setOnMouseClicked(new EventHandler<Event>() {
@@ -145,6 +149,23 @@ public class Main8 extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void myclick(Event event) {
+		Button imsi = (Button)event.getSource();
+		String str_new = imsi.getText();
+		String str_old = tf.getText();
+		tf.setText(str_old+str_new);
+	}
+	
+	public void mycall() {
+		String str_tel = tf.getText();
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("calling");
+		alert.setHeaderText(null);
+		alert.setContentText(str_tel);
+
+		alert.showAndWait();
 	}
 	
 	public static void main(String[] args) {

@@ -25,8 +25,7 @@ class MyWindow(QMainWindow, form_class):
             tmep = arr[rnd]
             arr[rnd] = -1
             res.append(tmep)
-        
-        # print(res)    
+         
         self.lbl1.setText(str(res[0]))
         self.lbl2.setText(str(res[1]))
         self.lbl3.setText(str(res[2]))

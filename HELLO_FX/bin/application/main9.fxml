@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="200" prefWidth="323.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label id="lblMine" layoutX="22.0" layoutY="21.0" text="나:" />
+            <Label id="lblCom" layoutX="22.0" layoutY="55.0" text="컴:" />
+            <Label id="lblResult" layoutX="22.0" layoutY="92.0" text="결과:" />
+            <TextField id="tf_my" layoutX="79.0" layoutY="17.0" />
+            <TextField id="tf_com" layoutX="79.0" layoutY="51.0" />
+            <TextField id="tf_result" layoutX="79.0" layoutY="88.0" />
+            <Button id="btn" layoutX="22.0" layoutY="125.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="228.0" text="게임하기" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

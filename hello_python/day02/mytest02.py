@@ -3,8 +3,8 @@
 from random import random
 
 class choice_random:
-    def __init__(self,range,count):
-        self.arr = list(range(1,range+1))
+    def __init__(self,range1,count):
+        self.arr = list(range(1,range1+1))
         self.res = []
         self.count = count
     
@@ -13,21 +13,24 @@ class choice_random:
             rnd = int(random() * self.arr.__len__())
             self.res.append(self.arr[rnd])
             self.arr.remove(self.arr[rnd])
+        return self.res
 
 
-def choice_random_N(a,b):
-    arr = list(range(1,a+1))
-    res = []
-
-    for i in range(1,b+1):
-        rnd = int(random() * arr.__len__())
-        res.append(arr[rnd])
-        arr.remove(arr[rnd])
-
-    return res
+# def choice_random_N(a,b):
+#     arr = list(range(1,a+1))
+#     res = []
+#
+#     for i in range(1,b+1):
+#         rnd = int(random() * arr.__len__())
+#         res.append(arr[rnd])
+#         arr.remove(arr[rnd])
+#
+#     return res
 
 if __name__ == '__main__':
-    print(choice_random_N(9, 3))
+    # print(choice_random_N(9, 3))
+    cho = choice_random(9,3)
+    print(cho.getres())
 
 
 

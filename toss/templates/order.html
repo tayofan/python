@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>테스트 주문페이지</title>
+    <script src="https://js.tosspayments.com/v1"></script>
+    <script>
+        // Toss객체 초기화
+        var clientKey = 'test_ck_MGjLJoQ1aVZ6yGX65ZlVw6KYe2RN';
+        var tossPayments = TossPayments(clientKey);
+
+        //결제창 호출
+        tossPayments.requestPayment('계좌이체', {
+            amount: 15000,
+            orderId: parseInt(Math.random()*1000000),
+            orderName: '토스 티셔츠 외 2건',
+            customerName: '박토스',
+            successUrl: window.location.origin + '/success', //결재성공시 
+            failUrl: window.location.origin + '/fail',
+        });
+    </script>
+
+</head>
+<body>
+결제창이 떳나요?
+</body>
+</html>
